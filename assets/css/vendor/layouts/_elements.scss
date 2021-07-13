@@ -1,3 +1,31 @@
+.boxstyle{
+	background-color: $box-background;
+	border-radius: $border-radius;
+	box-shadow: 0 2px 3px rgba(1,1,0,0.23);
+}
+
+.breadcrumbs{
+	padding: 8px 16px;
+	margin-top: 20px;
+	width: max-content;
+	max-width: 100%;
+	list-style: none;
+	display: flex;
+	
+	li{
+		&:not(:last-child){
+			padding-left: 20px;
+			margin-left: 25px;
+			color: map-get($colors , 'primary');
+			&:after{
+				color: black;
+				content: '>';
+				padding-right: 20px;
+			}
+		}
+	}
+}
+
 .pagination{
 	display: flex;
 	margin-top: 3rem;

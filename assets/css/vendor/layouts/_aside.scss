@@ -1,6 +1,21 @@
 #sidebar{
 	.widget{
-		.widget-title{}
+		padding: 20px 15px;
+		margin-top: 20px;
+		.widget-title{
+			color: map-get($colors , 'primary');
+			position: relative;
+			&:after{
+				content: '';
+				background-color: map-get( $colors, 'primary');
+				height: 20px;
+				width: 20px;
+				top: 0;
+				left: 0;
+				position: absolute;
+			}
+			
+		}
 
 		//Wordpress Widgets Classes
 		&.widget_search{}
