@@ -39,7 +39,7 @@
         }
 
         &:focus-within{
-            box-shadow: 0 0 2px rgba($color: black, $alpha: 0.5);
+            box-shadow: 0 0 2px 1px rgba($color: black, $alpha: 0.5);
         }
 
     }
