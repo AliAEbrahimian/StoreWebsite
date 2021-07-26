@@ -23,29 +23,30 @@
 				margin: 0;
 				list-style: none;
 			}
+
 			li{
+				
+				
 				> a{
 					padding: 0 10px;
-					margin: 0;
 					line-height: 25px;
 					display: flex;
 					align-items: center;
 					border-radius: $border-radius;
 					transition: all 0.3s linear;
-					&:not(:last-child){
-						margin-bottom: 10px;
-					}
+
 					&:hover{
 						color: #fff;
 						background-color: map-get($colors, 'primary');
 					}
+					
 					&:before{
 						content: '>>';
 						color: map-get($colors, 'primary');
 					}
-				}
-				
+				}	
 			}
+
 			> li{
 				&:not(:last-child){margin-bottom: 10px;}
 				> a {
@@ -80,32 +81,39 @@
 				}
 
 				.action{
+					cursor: default;
 					color: #fff;
 					background-color: map-get($colors, 'primary');
+					&:hover{
+						color: #fff;
+					}
 				}
 
 			}
 			.singers{
 				padding: 0;
 				margin: 10px 0;
+				cursor: pointer;
 				list-style: none;
 				display: grid;
 				grid-template-columns: 50% 50%;
 				li {
 					display: flex;
 					&:before{
+						margin-top: 5px;
 						content: '';
 						height: 6px;
 						width: 6px;
 						border-radius: 50%;
+						margin-left: 10px;
 						background-color: $border-color;
 					}
 					&:hover{
 						color: map-get($colors, 'primary');
+						
 					}
 				}
 			}
-			
 		}
 
 		// //Wordpress Widgets Classes
