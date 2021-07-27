@@ -99,6 +99,7 @@
 				grid-template-columns: 50% 50%;
 				li {
 					display: flex;
+					transition: all 0.3s linear;
 					&:before{
 						margin-top: 5px;
 						content: '';
@@ -110,7 +111,6 @@
 					}
 					&:hover{
 						color: map-get($colors, 'primary');
-						
 					}
 				}
 			}
