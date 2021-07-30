@@ -77,14 +77,17 @@
 
 					&:hover{
 						color: map-get($colors, 'primary');
+						transition: all 0.3s linear;
+						box-shadow: 0 2px 3px 0px rgba($color: black, $alpha: 0.5);
 					}
+
 				}
 
 				.action{
 					cursor: default;
 					color: #fff;
 					background-color: map-get($colors, 'primary');
-					&:hover{
+					&:not(:hover){
 						color: #fff;
 					}
 				}
@@ -116,9 +119,51 @@
 			}
 		}
 
-		.application{
-			&:not(:last-child){
-				margin-bottom: 10px;
+		ul.app{
+			margin: 0;
+			padding: 0;
+			list-style: none;		
+			li.link-app{
+				width: max-content;
+				max-width: 100%;
+				border-radius: $border-radius;
+				img{
+					border-radius: $border-radius;
+				}
+				&:not(:last-child){
+					margin-bottom: 10px;
+				}
+				&:hover{
+					transition: all 0.3s linear;
+					box-shadow: 0 2px 3px 0px rgba($color: black, $alpha: 0.5);
+				}
+			}
+		}
+
+		.card{
+			ul.list-group{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				.list-group-item{
+					text-align: center;
+					img{
+						border-top-left-radius: $border-radius;
+						border-top-right-radius: $border-radius;
+						height: 80px;
+						width: max-content;
+						width: 100%;
+					}
+					border: 1px solid $border-color;
+					border-radius: $border-radius;
+					&:not(:last-child){
+						margin-bottom: 10px;
+					}
+					&:hover{
+						transition: all 0.3s linear;
+            			box-shadow: 0 2px 3px 0px rgba($color: black, $alpha: 0.5);
+					}
+				}
 			}
 		}
 

@@ -38,7 +38,8 @@
             box-shadow: none !important;
         }
 
-        &:focus-within{
+        &:focus-within, &:hover{
+            transition: all 0.3s linear;
             box-shadow: 0 2px 3px 0px rgba($color: black, $alpha: 0.5);
         }
 
