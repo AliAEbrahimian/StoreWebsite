@@ -116,6 +116,12 @@
 			}
 		}
 
+		.application{
+			&:not(:last-child){
+				margin-bottom: 10px;
+			}
+		}
+
 		// //Wordpress Widgets Classes
 		// &.widget_search{}
 		// &.widget_categories{}
