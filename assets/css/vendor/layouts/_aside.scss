@@ -119,23 +119,46 @@
 			}
 		}
 
-		ul.app{
-			margin: 0;
-			padding: 0;
-			list-style: none;		
-			li.link-app{
-				width: max-content;
-				max-width: 100%;
-				border-radius: $border-radius;
-				img{
-					border-radius: $border-radius;
+		.sortsongs{
+			margin: 0 -15px;
+			.newsongs{
+				padding: 0;
+				margin: 0;
+				text-align: center;
+				list-style: none;
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				border-top: 1px solid $border-color;
+				border-bottom: 1px solid $border-color;
+				
+				.action{
+					color: #000;
+					background-color: $border-color;
 				}
-				&:not(:last-child){
-					margin-bottom: 10px;
+				
+				li{
+					padding: 20px 15px;
+					&:not(:last-child){
+					border-left:  1px solid $border-color;
+					}
 				}
-				&:hover{
-					transition: all 0.3s linear;
-					box-shadow: 0 2px 3px 0px rgba($color: black, $alpha: 0.5);
+			}
+
+			.newalbums{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				display: contents;
+				li{
+					padding: 10px 15px 0 0;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+
+					&:not(:last-child){
+						height: 40px;
+						border-bottom:  1px solid $border-color;
+					}
 				}
 			}
 		}
@@ -167,11 +190,77 @@
 			}
 		}
 
+		.organized{
+			margin: 0 -15px;
+			.selected{
+				padding: 0;
+				margin: 0;
+				text-align: center;
+				list-style: none;
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				border-top: 1px solid $border-color;
+				border-bottom: 1px solid $border-color;
+				
+				.action{
+					color: #000;
+					background-color: $border-color;
+				}
+				
+				li{
+					padding: 20px 15px;
+					&:not(:last-child){
+					border-left:  1px solid $border-color;
+					}
+				}
+			}
+
+			.anthology{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				display: contents;
+				li{
+					padding: 10px 15px 0 0;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+
+					&:not(:last-child){
+						height: 40px;
+						border-bottom:  1px solid $border-color;
+					}
+				}
+			}
+		}
+
+		ul.app{
+			margin: 0;
+			padding: 0;
+			list-style: none;		
+			li.link-app{
+				width: max-content;
+				max-width: 100%;
+				border-radius: $border-radius;
+				img{
+					border-radius: $border-radius;
+				}
+				&:not(:last-child){
+					margin-bottom: 10px;
+				}
+				&:hover{
+					transition: all 0.3s linear;
+					box-shadow: 0 2px 3px 0px rgba($color: black, $alpha: 0.5);
+				}
+			}
+		}
+
 		// //Wordpress Widgets Classes
 		// &.widget_search{}
 		// &.widget_categories{}
 		// &.widget_archive{}
 		// &.widget_recent_entries{}
 		// &.widget_tag_cloud{}
+		
 	}
 }
