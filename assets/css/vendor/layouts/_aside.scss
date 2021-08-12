@@ -1,7 +1,10 @@
 #sidebar{
+	margin: 0;
 	.widget{
 		padding: 20px 15px;
-		margin-top: 20px;
+		&:not(:last-child){
+			margin-bottom: 20px;
+		}
 		.widget-title{
 			color: map-get($colors , 'primary');
 			position: relative;
@@ -111,10 +114,10 @@
 						border-radius: 50%;
 						margin-left: 10px;
 						background-color: $border-color;
+						transition: all 0.3s linear;
 					}
-					&:hover{
-						color: map-get($colors, 'primary');
-					}
+					&:hover:before{background-color: map-get($colors, 'primary');}
+					&:hover{color: map-get($colors, 'primary');}
 				}
 			}
 		}
@@ -173,7 +176,7 @@
 					img{
 						border-top-left-radius: $border-radius;
 						border-top-right-radius: $border-radius;
-						height: 80px;
+						height: 60px;
 						width: max-content;
 						width: 100%;
 					}

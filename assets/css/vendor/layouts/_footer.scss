@@ -1,13 +1,4 @@
 #siteFoot{
-    margin-top: 20px;
-    padding: 20px 0;
-    background-color: map-get($colors, 'primary');
-    // &:before{
-    //     content: '';
-    //     display: block;
-    //     height: 5px;
-    //     border-bottom: 1px dashed $border-color;
-    //     border-top: 1px dashed $border-color;
-    //     margin-top: 20px;
-    // }
+    img{filter: grayscale(100%);}
+    box-shadow: inset 0px 7px 20px 0px rgba(1,1,1,0.12);
 }
