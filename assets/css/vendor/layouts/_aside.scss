@@ -6,6 +6,7 @@
 			margin-bottom: 20px;
 		}
 		.widget-title{
+			margin-bottom: 20px;
 			color: map-get($colors , 'primary');
 			position: relative;
 			&:after{
@@ -14,7 +15,7 @@
 				height: 20px;
 				width: 20px;
 				top: 0;
-				left: 0;
+				left: -15px;
 				position: absolute;
 			}
 		}
@@ -98,7 +99,7 @@
 			}
 			.singers{
 				padding: 0;
-				margin: 10px 0;
+				margin-top: 10px;
 				cursor: pointer;
 				list-style: none;
 				display: grid;
@@ -116,8 +117,10 @@
 						background-color: $border-color;
 						transition: all 0.3s linear;
 					}
-					&:hover:before{background-color: map-get($colors, 'primary');}
-					&:hover{color: map-get($colors, 'primary');}
+					&:hover{
+						color: map-get($colors, 'primary');
+						&:before{background-color: map-get($colors, 'primary');}
+					}
 				}
 			}
 		}
@@ -140,6 +143,10 @@
 				}
 				
 				li{
+					transition: all 0.3s linear;
+					&:hover{
+						color: map-get($colors, 'primary');
+					}
 					padding: 20px 15px;
 					&:not(:last-child){
 					border-left:  1px solid $border-color;
@@ -153,6 +160,11 @@
 				list-style: none;
 				display: contents;
 				li{
+					transition: all 0.3s linear;
+					&:hover{
+						color: #fff;
+						background-color: map-get($colors, 'primary');
+					}
 					padding: 10px 15px 0 0;
 					overflow: hidden;
 					white-space: nowrap;
@@ -211,6 +223,10 @@
 				}
 				
 				li{
+					transition: all 0.3s linear;
+					&:hover{
+						color: map-get($colors, 'primary');
+					}
 					padding: 20px 15px;
 					&:not(:last-child){
 					border-left:  1px solid $border-color;
@@ -224,6 +240,11 @@
 				list-style: none;
 				display: contents;
 				li{
+					transition: all 0.3s linear;
+					&:hover{
+						color: #fff;
+						background-color: map-get($colors, 'primary');
+					}
 					padding: 10px 15px 0 0;
 					overflow: hidden;
 					white-space: nowrap;
