@@ -55,26 +55,15 @@ require(['mmenu', 'bootstrap', 'slick'], function($){
 		}
 		initjsFuncs();
 
-		/*
-		Ajax Template
-		$.ajax({
-			type : 'POST',
-			url : rqjs.getAttribute('data-ajax'),
-			data : {
-				action : 'actionname',
-				inputs : $(this).serialize()
-			},
-			beforeSend: function() {
-				...
-			},
-			success : function(resp) {
-				...
-			},
-			complete: function(){
-				initAjax();
+		$('.categories > li > ul').slideUp(0);
+
+		$('.categories > li > a').click( function(e){
+			e.preventDefault();
+			if( $(this).parent().has('ul').length ){
+				$(this).parent().find('ul').slideToggle();
 			}
+			
 		});
-		*/
 
 	});
 });
